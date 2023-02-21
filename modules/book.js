@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export class Book {
   constructor(id, title, author) {
     this.id = id;
@@ -6,3 +5,5 @@ export class Book {
     this.author = author;
   }
 }
+
+export default Book;

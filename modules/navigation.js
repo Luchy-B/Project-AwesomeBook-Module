@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const navigator = () => {
   const pev = document.querySelectorAll('.window');
   const btx = document.querySelectorAll('.switch');
@@ -21,3 +20,5 @@ export const navigator = () => {
     });
   });
 };
+
+export default navigator;
