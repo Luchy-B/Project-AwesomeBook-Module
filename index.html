@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome-Book</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Awesome Books</p>
+
+            <ul>
+                <li ><a href="#" class="switch active">List</a></li> <hr>
+                <li><a href="#"class="switch">Add new</a></li> <hr>
+                <li><a href="#" class="switch">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="headerTime" id="dated"></p>
+    </header>
+    <main>
+    <section class="window current-window">
+        <h1 class="section-title">All awesome books</h1>
+        <div id="book-collection">
+            <!-- Container for displaying the books -->
+          </div>
+    </section>
+    <section class="window  form-section">
+        <h3 class="form-title">Add a new book</h3>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Book title">
+            <br>
+            <br>
+            <input type="text" id="author" placeholder="Author">
+            <br>
+            <br>
+            <button type="submit">Add</button>
+          </form>
+    </section>
+
+    <section class="window contact-Section">
+        <h3>Contact Information</h3>     
+        <div class="contact-Container">          
+            <p>Do you have any questions or you just want
+                 to say "Hello"? 
+            </p>
+            <p>You can reach out to us</p>
+            <ul>
+                <li>Our e-mail: mail@mail.com</li>
+                <li>Our phone number: 0078427758284</li>
+                <li>Our address: No. 22 Carlifornia Street, Port-Harcourt, Nigeria</li>
+            </ul>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="copyright-Container">
+            <p>Copyright</p>
+            <p>...</p>
+        </div>
+    </footer>
+    
+    <script src="index.js"  type="module"></script>
+
+</body>
+</html>
