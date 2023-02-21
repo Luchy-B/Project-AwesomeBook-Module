@@ -1,7 +1,8 @@
-export const date = () => {
-  const timeDate = document.getElementById('dated');
-  const date = new Date().toUTCString();
-  timeDate.innerHTML = date;
-};
+import { DateTime } from './luxon.js';
 
-export default date;
+const timeDate = document.getElementById('dated');
+
+setInterval(() => {
+  const now = DateTime.now();
+  timeDate.innerHTML = now.toFormat('ccc LLL dd yyyy, hh:mm:ss a');
+}, 1000);

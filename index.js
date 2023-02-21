@@ -1,4 +1,4 @@
-import { date } from './modules/date.js';
+import './modules/date.js';
 import { navigator } from './modules/navigation.js';
 import { Book } from './modules/book.js';
 
@@ -71,5 +71,4 @@ bookForm.addEventListener('submit', (event) => {
   bookForm.reset();
 });
 
-window.onload = date;
 navigator();
