@@ -9,11 +9,11 @@ class BookCollection {
 
   getNextId() {
     let maxId = 0;
-    for (const book of this.books) {
+    this.books.forEach((book) => {
       if (book.id > maxId) {
         maxId = book.id;
       }
-    }
+    });
     return maxId + 1;
   }
 
@@ -32,7 +32,8 @@ class BookCollection {
   render = () => {
     const bookCollection = document.getElementById('book-collection');
     bookCollection.innerHTML = '';
-    for (const book of this.books) {
+
+    this.books.forEach((book) => {
       const bookElement = document.createElement('div');
       bookElement.className = 'list-block';
       bookElement.innerHTML = `<h4>${book.title} by ${book.author}</h4><button class="remove-button">Remove</button>`;
@@ -41,7 +42,7 @@ class BookCollection {
         this.render();
       });
       bookCollection.appendChild(bookElement);
-    }
+    });
   }
 
   save() {
@@ -50,9 +51,9 @@ class BookCollection {
 
   load = () => {
     const books = JSON.parse(localStorage.getItem('books')) || [];
-    for (const book of books) {
+    books.forEach((book) => {
       this.books.push(new Book(book.id, book.title, book.author));
-    }
+    });
   }
 }
 
